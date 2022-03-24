@@ -32,11 +32,11 @@ while pagina_atual <= int(pagina_alvo) - 1:
         driver.get(url_pagina)
     pagina_atual += 1
 
-    divs = driver.find_elements_by_xpath("//div[@class='g']")
+    divs = driver.find_elements_by_xpath("//div[@class='yuRUbf']")
     for div in divs:
-        nome = div.find_element_by_tag_name("span")
+        nome = div.find_element_by_tag_name("h3")
         link = div.find_element_by_tag_name("a")
-        resultado = "%s >> %s" % (nome.text,link.get_attribute("href"))
+        resultado = "%s >> %s" % (nome.text, link.get_attribute("href"))
         print(resultado)
         lista_resultados.append(resultado)
 
